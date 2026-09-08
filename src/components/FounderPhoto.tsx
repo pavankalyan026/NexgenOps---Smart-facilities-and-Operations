@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Camera, RefreshCw } from 'lucide-react';
-import founderAsset from '../assets/founder.png';
+import founderAsset from '../assets/founder-photo.jpg.png';
 
 interface FounderPhotoProps {
   className?: string;
