@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Camera, RefreshCw } from 'lucide-react';
+import React from 'react';
 import founderAsset from '../assets/founder-photo.jpg.png';
 
 interface FounderPhotoProps {
@@ -15,80 +14,7 @@ export const FounderPhoto: React.FC<FounderPhotoProps> = ({
   size = 'lg',
   shape = 'rounded',
   ring = true,
-  showUploadTrigger = true,
 }) => {
-  const [customPhoto, setCustomPhoto] = useState<string | null>(null);
-  const [imgSrcIndex, setImgSrcIndex] = useState(0);
-  const [hasError, setHasError] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  // Validate and load custom photo from localStorage
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem('nexgenops_founder_custom_photo');
-      if (saved && saved.startsWith('data:image/')) {
-        setCustomPhoto(saved);
-      } else if (saved) {
-        // Clear broken / non-data URI strings that could cause blank images
-        localStorage.removeItem('nexgenops_founder_custom_photo');
-      }
-    } catch {
-      // ignore storage errors
-    }
-  }, []);
-
-  // Ordered fallback chain prioritizing root assets that are guaranteed to serve cleanly
-  const sources = [
-    customPhoto,
-    '/founder.jpg',
-    '/founder.png',
-    '/1780915862398.png',
-    founderAsset,
-    '/founder_executive.jpg',
-  ].filter(Boolean) as string[];
-
-  const currentSource = sources[imgSrcIndex] || '/founder.jpg';
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      processFile(file);
-    }
-  };
-
-  const processFile = (file: File) => {
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const result = event.target?.result as string;
-      if (result) {
-        setCustomPhoto(result);
-        try {
-          localStorage.setItem('nexgenops_founder_custom_photo', result);
-        } catch {
-          // localStorage quota exceeded fallback
-        }
-        setImgSrcIndex(0);
-        setHasError(false);
-        setIsLoaded(false);
-      }
-    };
-    reader.readAsDataURL(file);
-  };
-
-  const handleResetPhoto = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    try {
-      localStorage.removeItem('nexgenops_founder_custom_photo');
-    } catch {
-      // ignore
-    }
-    setCustomPhoto(null);
-    setImgSrcIndex(0);
-    setHasError(false);
-    setIsLoaded(false);
-  };
-
   const sizeClasses = {
     sm: 'w-12 h-12',
     md: 'w-20 h-20',
@@ -96,15 +22,34 @@ export const FounderPhoto: React.FC<FounderPhotoProps> = ({
     xl: 'w-56 h-72 sm:w-64 sm:h-80',
   };
 
-  const shapeClass = shape === 'circle' ? 'rounded-full' : 'rounded-2xl sm:rounded-3xl';
+  const shapeClass =
+    shape === 'circle'
+      ? 'rounded-full'
+      : 'rounded-2xl sm:rounded-3xl';
 
   return (
-    <div 
-      className={`relative group shrink-0 ${sizeClasses[size]} ${className}`}
-      onDragOver={(e) => e.preventDefault()}
-      onDrop={(e) => {
-        e.preventDefault();
-        const file = e.dataTransfer.files?.[0];
+    <div
+      className={`relative shrink-0 ${sizeClasses[size]} ${className}`}
+    >
+      <div
+        className={`w-full h-full overflow-hidden bg-slate-200 dark:bg-slate-800 ${shapeClass} ${
+          ring
+            ? 'ring-2 ring-cyan-500/60 dark:ring-cyan-500/50 shadow-xl shadow-cyan-950/20 dark:shadow-cyan-950/60'
+            : ''
+        }`}
+      >
+        <img
+          src={founderAsset}
+          alt="Pavankalyan Koneti, Founder & Executive Lead, NexgenOps"
+          loading="eager"
+          className="w-full h-full object-cover object-top"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-transparent pointer-events-none" />
+      </div>
+    </div>
+  );
+};        const file = e.dataTransfer.files?.[0];
         if (file && file.type.startsWith('image/')) {
           processFile(file);
         }
