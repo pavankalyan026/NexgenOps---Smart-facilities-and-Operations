@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/NexgenOps---Smart-facilities-and-Operations/',
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
