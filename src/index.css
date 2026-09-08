@@ -46,3 +46,21 @@ html:not(.dark) ::-webkit-scrollbar-thumb {
 html:not(.dark) ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+/* Mobile viewport width fix */
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
