@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#727986"/>
+      <stop offset="60%" stop-color="#4a505b"/>
+      <stop offset="100%" stop-color="#2d323a"/>
+    </radialGradient>
+
+    <!-- Skin Tones -->
+    <linearGradient id="skinBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c68a62"/>
+      <stop offset="50%" stop-color="#b1744b"/>
+      <stop offset="100%" stop-color="#935b36"/>
+    </linearGradient>
+    <linearGradient id="skinShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#804d2e" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#693c1f" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Charcoal Suit -->
+    <linearGradient id="suitCharcoal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#464b54"/>
+      <stop offset="40%" stop-color="#363a42"/>
+      <stop offset="100%" stop-color="#24272d"/>
+    </linearGradient>
+    <linearGradient id="lapelShine" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#565c67"/>
+      <stop offset="100%" stop-color="#2c3037"/>
+    </linearGradient>
+
+    <!-- Vest -->
+    <linearGradient id="vestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b3f47"/>
+      <stop offset="100%" stop-color="#22252a"/>
+    </linearGradient>
+
+    <!-- Navy Tie -->
+    <linearGradient id="navyTie" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0a0f1d"/>
+    </linearGradient>
+
+    <!-- Silver Pocket Square -->
+    <linearGradient id="pocketSquare" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="50%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+
+    <!-- Hair Gradient -->
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#262425"/>
+      <stop offset="40%" stop-color="#151415"/>
+      <stop offset="100%" stop-color="#090809"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Studio Background -->
+  <rect width="600" height="750" fill="url(#bgGrad)"/>
+
+  <!-- Torso & Outer Charcoal Suit Jacket -->
+  <g id="suit-jacket">
+    <!-- Shoulder base -->
+    <path d="M 80 750 L 110 520 C 130 450 180 430 230 420 L 300 440 L 370 420 C 420 430 470 450 490 520 L 520 750 Z" fill="url(#suitCharcoal)"/>
+    
+    <!-- Outer suit fold lines & shadows -->
+    <path d="M 110 520 C 135 600 160 670 170 750" stroke="#1d2024" stroke-width="4" fill="none"/>
+    <path d="M 490 520 C 465 600 440 670 430 750" stroke="#1d2024" stroke-width="4" fill="none"/>
+
+    <!-- Left Jacket Lapel -->
+    <path d="M 230 420 L 210 540 L 265 630 L 275 750 L 250 750 L 195 560 L 205 440 Z" fill="url(#lapelShine)"/>
+    <path d="M 205 440 L 180 480 L 210 540" stroke="#1d2024" stroke-width="2" fill="url(#lapelShine)"/>
+
+    <!-- Right Jacket Lapel -->
+    <path d="M 370 420 L 390 540 L 335 630 L 325 750 L 350 750 L 405 560 L 395 440 Z" fill="url(#lapelShine)"/>
+    <path d="M 395 440 L 420 480 L 390 540" stroke="#1d2024" stroke-width="2" fill="url(#lapelShine)"/>
+
+    <!-- Left Breast Pocket with Silver Pocket Square -->
+    <path d="M 390 580 L 430 575 L 435 595 L 395 600 Z" fill="#2a2e35" stroke="#1e2126" stroke-width="2"/>
+    <!-- Folded Silk Pocket Square peaks -->
+    <path d="M 398 580 C 405 560 415 558 420 572 C 424 562 432 566 430 578 Z" fill="url(#pocketSquare)"/>
+  </g>
+
+  <!-- Vest (Waistcoat) & Buttons -->
+  <g id="vest">
+    <path d="M 245 470 L 300 580 L 355 470 L 365 750 L 235 750 Z" fill="url(#vestGrad)"/>
+    <!-- Vest Edge Seams -->
+    <path d="M 252 480 L 300 570 L 348 480" stroke="#1a1d22" stroke-width="3" fill="none"/>
+    <path d="M 300 570 L 300 750" stroke="#1a1d22" stroke-width="2"/>
+    <!-- Vest Buttons -->
+    <circle cx="300" cy="620" r="4.5" fill="#15171a" stroke="#464b54" stroke-width="1.5"/>
+    <circle cx="300" cy="660" r="4.5" fill="#15171a" stroke="#464b54" stroke-width="1.5"/>
+    <circle cx="300" cy="700" r="4.5" fill="#15171a" stroke="#464b54" stroke-width="1.5"/>
+    <circle cx="300" cy="740" r="4.5" fill="#15171a" stroke="#464b54" stroke-width="1.5"/>
+  </g>
+
+  <!-- Crisp White Shirt & Navy Tie -->
+  <g id="shirt-and-tie">
+    <!-- Shirt Collar Inner Triangle -->
+    <polygon points="255,420 345,420 300,510" fill="#f8fafc"/>
+    <polygon points="268,430 300,500 282,500" fill="#e2e8f0"/>
+    <polygon points="332,430 300,500 318,500" fill="#e2e8f0"/>
+
+    <!-- Spread Collar Wings -->
+    <polygon points="252,410 288,460 270,470 248,422" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <polygon points="348,410 312,460 330,470 352,422" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Navy Silk Tie -->
+    <!-- Tie Knot -->
+    <polygon points="288,452 312,452 308,485 292,485" fill="url(#navyTie)"/>
+    <path d="M 292 485 L 308 485 L 314 590 L 300 610 L 286 590 Z" fill="url(#navyTie)"/>
+    <!-- Tie texture sheen -->
+    <path d="M 295 490 L 303 585" stroke="#3b82f6" stroke-opacity="0.15" stroke-width="3"/>
+  </g>
+
+  <!-- Neck & Chin -->
+  <g id="neck">
+    <path d="M 265 370 L 265 440 C 285 455 315 455 335 440 L 335 370 Z" fill="url(#skinBase)"/>
+    <path d="M 265 385 C 285 410 315 410 335 385 L 335 435 C 315 450 285 450 265 435 Z" fill="url(#skinShadow)"/>
+    <!-- Collar shadow -->
+    <path d="M 260 425 C 285 445 315 445 340 425 L 340 440 C 315 455 285 455 260 440 Z" fill="#000000" opacity="0.3"/>
+  </g>
+
+  <!-- Head & Face: Pavankalyan Koneti -->
+  <g id="head">
+    <!-- Jawline & Face base -->
+    <path d="M 225 240 C 225 170 250 140 300 140 C 350 140 375 170 375 240 C 375 310 355 375 300 378 C 245 375 225 310 225 240 Z" fill="url(#skinBase)"/>
+
+    <!-- Subtle cheekbone & chin contouring -->
+    <path d="M 235 270 C 240 335 270 368 300 370 C 330 368 360 335 365 270 C 355 300 330 340 300 342 C 270 340 245 300 235 270 Z" fill="url(#skinShadow)"/>
+
+    <!-- Ears -->
+    <path d="M 222 230 C 215 220 216 265 226 270 Z" fill="#ab6e45"/>
+    <path d="M 378 230 C 385 220 384 265 374 270 Z" fill="#ab6e45"/>
+
+    <!-- Eyes & Brows -->
+    <!-- Left Brow -->
+    <path d="M 248 215 C 260 208 276 210 284 216" stroke="#171516" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- Right Brow -->
+    <path d="M 316 216 C 324 210 340 208 352 215" stroke="#171516" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Left Eye -->
+    <ellipse cx="268" cy="230" rx="13" ry="8" fill="#ffffff"/>
+    <circle cx="268" cy="230" r="5.5" fill="#2d1d13"/>
+    <circle cx="266" cy="228" r="2" fill="#ffffff"/>
+    <path d="M 255 228 C 263 222 274 222 281 228" stroke="#1c1816" stroke-width="2.5" fill="none"/>
+    <path d="M 257 232 C 264 236 272 236 279 232" stroke="#683d21" stroke-width="1.5" fill="none"/>
+
+    <!-- Right Eye -->
+    <ellipse cx="332" cy="230" rx="13" ry="8" fill="#ffffff"/>
+    <circle cx="332" cy="230" r="5.5" fill="#2d1d13"/>
+    <circle cx="330" cy="228" r="2" fill="#ffffff"/>
+    <path d="M 319 228 C 326 222 337 222 345 228" stroke="#1c1816" stroke-width="2.5" fill="none"/>
+    <path d="M 321 232 C 328 236 336 236 343 232" stroke="#683d21" stroke-width="1.5" fill="none"/>
+
+    <!-- Nose -->
+    <path d="M 300 220 L 297 268 C 294 274 290 276 288 277 M 300 220 L 303 268 C 306 274 310 276 312 277" stroke="#8c5330" stroke-width="2" fill="none"/>
+    <path d="M 288 277 C 294 282 306 282 312 277" stroke="#7a4627" stroke-width="2.5" fill="none"/>
+    <!-- Nostril accents -->
+    <circle cx="292" cy="275" r="2" fill="#583119"/>
+    <circle cx="308" cy="275" r="2" fill="#583119"/>
+
+    <!-- Mustache & Beard (Neat Groomed Professional) -->
+    <!-- Trimmed Mustache -->
+    <path d="M 280 298 C 290 292 298 295 300 298 C 302 295 310 292 320 298 C 314 306 304 307 300 302 C 296 307 286 306 280 298 Z" fill="#1c1a1b"/>
+
+    <!-- Lips -->
+    <path d="M 286 314 C 293 311 307 311 314 314" stroke="#8e533c" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 289 315 C 295 322 305 322 311 315" stroke="#763f2b" stroke-width="2" fill="none"/>
+
+    <!-- Light Beard / Stubble shadow along chin & jawline -->
+    <path d="M 240 278 C 248 335 272 364 300 366 C 328 364 352 335 360 278 C 354 320 330 356 300 358 C 270 356 246 320 240 278 Z" fill="#181516" opacity="0.35"/>
+    <ellipse cx="300" cy="336" rx="8" ry="4" fill="#181516" opacity="0.4"/>
+  </g>
+
+  <!-- Styled Dark Wavy Hair -->
+  <g id="hair">
+    <!-- Base hair volume on top -->
+    <path d="M 218 220 C 210 185 220 135 250 105 C 280 75 335 75 365 105 C 385 125 392 165 382 220 C 375 190 365 170 345 155 C 315 145 285 145 255 155 C 235 170 225 190 218 220 Z" fill="url(#hairGrad)"/>
+    <!-- Top volume crests and textured waves -->
+    <path d="M 230 145 C 242 105 275 80 310 82 C 345 84 372 108 380 145 C 365 110 338 95 305 95 C 265 95 242 115 230 145 Z" fill="#323032"/>
+    <path d="M 255 105 C 275 88 310 85 335 92 C 320 85 295 85 275 92 Z" fill="#464448"/>
+    <!-- Sideburns -->
+    <path d="M 224 210 L 222 245 L 228 245 L 230 210 Z" fill="#181516"/>
+    <path d="M 376 210 L 378 245 L 372 245 L 370 210 Z" fill="#181516"/>
+  </g>
+
+  <!-- Studio Subtle Lighting Highlights & Overlay -->
+  <ellipse cx="300" cy="200" rx="220" ry="160" fill="#ffffff" opacity="0.03"/>
+</svg>

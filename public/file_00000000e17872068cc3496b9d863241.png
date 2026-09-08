@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 140" fill="none" width="100%" height="100%">
+  <defs>
+    <linearGradient id="orbitGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#093552"/>
+      <stop offset="60%" stop-color="#0c607a"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#144670"/>
+      <stop offset="40%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Mark Icon -->
+  <g transform="translate(16, 12)">
+    <!-- Outer Orbital Ring -->
+    <ellipse cx="58" cy="58" rx="46" ry="46" stroke="url(#orbitGrad)" stroke-width="8.5" fill="none" stroke-linecap="round" stroke-dasharray="240 50" transform="rotate(-30 58 58)" />
+    <path d="M 20 74 C 18 50 36 24 64 20 C 82 17 98 28 102 38" stroke="url(#orbitGrad)" stroke-width="7" stroke-linecap="round" fill="none" />
+    <path d="M 96 46 C 104 62 98 88 74 98 C 50 108 26 94 20 76" stroke="url(#orbitGrad)" stroke-width="8" stroke-linecap="round" fill="none" />
+
+    <!-- Stylized 'N' Glyph with Ascending Arrow -->
+    <!-- Left vertical-diagonal stroke of N -->
+    <path d="M 32 76 L 52 38 C 54 34 60 34 63 38 L 74 58 L 88 28" stroke="url(#arrowGrad)" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- Inner dynamic bridge -->
+    <path d="M 52 38 L 74 74 L 88 34" stroke="url(#arrowGrad)" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- Arrow Head pointing top-right -->
+    <polygon points="88,18 104,36 82,36" fill="#1d4ed8" />
+    <path d="M 88 18 L 104 36 L 82 36 Z" fill="url(#arrowGrad)" />
+  </g>
+
+  <!-- Wordmark: NexgenOps -->
+  <g transform="translate(142, 68)">
+    <text font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="52" font-weight="800" letter-spacing="-1.5">
+      <tspan fill="#1e3a8a" class="brand-text-dark">Nexgen</tspan><tspan fill="#0284c7" class="brand-text-accent">Ops</tspan>
+    </text>
+    <!-- Tagline: Smart Operations & Facility Management Platform -->
+    <text y="32" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="500" fill="#64748b" letter-spacing="0.2">
+      Smart Operations &amp; Facility Management Platform
+    </text>
+  </g>
+</svg>

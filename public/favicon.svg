@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="favOrbit" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b3859"/>
+      <stop offset="60%" stop-color="#0e7490"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="favArrow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <!-- Background subtle disc -->
+  <rect width="120" height="120" rx="28" fill="#091424"/>
+  
+  <!-- Outer Orbital Ring -->
+  <ellipse cx="60" cy="60" rx="42" ry="42" stroke="url(#favOrbit)" stroke-width="7" fill="none" stroke-linecap="round" stroke-dasharray="200 40" transform="rotate(-30 60 60)" />
+  <path d="M 26 76 C 24 52 40 28 66 24 C 84 21 98 32 102 42" stroke="url(#favOrbit)" stroke-width="6" stroke-linecap="round" fill="none" />
+  <path d="M 96 48 C 104 64 98 86 76 96 C 54 106 32 94 26 76" stroke="url(#favOrbit)" stroke-width="7" stroke-linecap="round" fill="none" />
+
+  <!-- Stylized 'N' Glyph with Ascending Arrow -->
+  <path d="M 36 76 L 54 42 C 56 38 62 38 65 42 L 74 60 L 88 32" stroke="url(#favArrow)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M 54 42 L 74 74 L 88 36" stroke="url(#favArrow)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Arrow Head -->
+  <polygon points="88,20 102,36 82,36" fill="#38bdf8" />
+</svg>
